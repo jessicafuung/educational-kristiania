@@ -1,0 +1,431 @@
+/* Bakgrunn for himmel */ 
+.himmel {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    background-color: #e6ffff;
+}
+ 
+/* Overskrift "historiene fra havet" */ 
+.overskriftabsolute {
+    animation: skilt 13s linear infinite; 
+    position: absolute; 
+    left: 40%;
+    right: 21%;
+}
+
+/* Animerende effekt på overskrift */ 
+@keyframes skilt {
+    0% 
+        {
+        transform: rotate(0deg);
+        top: 0%;
+    }
+    50% 
+        {
+        transform: rotate(10deg);
+        top: 15%;
+    }
+    100% 
+        {
+        transform: rotate(0deg);
+        top: 0%;
+    }
+}
+
+/* Skilt til overskriften */ 
+.skilt1 { 
+    width: 60%;
+    max-width: 60%;
+}
+
+.overskrift {
+    position: absolute; 
+    top: 40%; 
+    left: 25%; 
+    right: 50%; 
+    font-family: cursive;
+    text-shadow: 20px 20px 20px #FFFFFF; 
+    font-size: 15px; 
+}
+
+/* Plassering på solen */ 
+.solabsolute {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    left: 75%;
+}
+
+/* Effekt på solen */
+.solbilde {
+    animation: sol 15s linear infinite;
+}
+
+/* Skyene på himmelen. Samme kode for bevegende skyer, men ulik hastighet */
+.skyabsolute1 {
+    animation: sky 180s linear infinite;
+    position: absolute;
+    left: 15%;
+    top: 12%;
+    max-width: 25%;
+    min-width: 25%
+}
+
+.skyabsolute2 {
+    animation: sky 100s linear infinite;
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.skyabsolute3 {
+    animation: sky 80s linear infinite;
+    position: absolute;
+    left: 40%;
+    top: 12%;
+    max-width: 25%;
+    min-width: 25%; 
+}
+
+/* Endre hastighet på denne skyen */
+.skybilde2 {
+    width: 100%;
+}
+
+@keyframes sky {
+     0%
+        {
+        left: 0%;
+    }
+    100%
+        {
+        left: 85%;
+    }
+}
+
+/* Endre hastighet på denne skyen */ 
+.skybilde1 {
+    width: 60%;
+}
+
+@keyframes sol {
+    0% 
+        {
+        width: 50%;
+    }
+    50%
+        {
+        width: 60%;
+    }
+    100%
+        {
+        width: 50%;
+    }
+}
+
+.havet {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    background-color: #33adff;
+}
+
+/* Sanden på land */ 
+.sand {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    bottom: 0%;
+}
+
+/* Piratskipet - vaiende effekt */ 
+.piratskipabsolute {
+    animation: skip 10s linear infinite;
+    position: absolute;
+    bottom: 75%;
+    left: 10%;
+    right: 60%;
+}
+
+/* Størrelsen på selve piratskipet */ 
+.piratskip {
+     width: 50%;
+}
+
+/* Piraten som står plassert på piratskipet */ 
+.pirat {
+    position: absolute;
+    width: 32%;
+    left: -6%;
+    bottom: 42%;
+}
+
+/* Vikinskipet - vaiende effekt */ 
+.vikingskipabsolute {
+    animation: skip 9s linear infinite;
+    position: absolute;
+    bottom: 70%;
+    right: 20%;
+    left: 60%;
+}
+
+/* Selve vikingen som står plassert på vikingskipet */ 
+.viking {
+    position: absolute;
+    width: 40%;
+    bottom: 31%;
+    left: 60%
+}
+
+/* Størrelsen på vikingskipet */
+.vikingskip {
+    width: 180%;
+}
+
+/* Bevegelse på skip */
+@keyframes skip {
+    0% 
+        {
+        transform: rotate(0deg);
+    }
+    50% 
+        {
+        transform: rotate(10deg);
+    }
+    100% 
+        {
+        transform: rotate(0deg);
+    }
+}
+
+/* Forteller (skilpadde) */
+.skilpaddeabsolute {
+    position: absolute;
+    left: 5%;
+    width: 50%;
+    bottom: 0%;
+}
+
+.skilpadde {
+    width: 45%;
+}
+
+/* Snakkeboblen til fortelleren/skilpadden */
+.snakkeboble {
+    position: absolute;
+    height: 140%;
+    width: 70%;
+    left: 23%;
+    bottom: 74%;
+}
+
+.tekst {
+    position: absolute;
+    bottom: 131%;
+    top: -90%;
+    left: 44%;
+    width: 30%;
+    font-size: 2.5vh;
+    overflow: hidden;   
+}
+
+/* Audio snakkeboble */
+.lydfil {
+    position: absolute;
+    width: 15%;
+    max-width: 15%;
+    height: 15%;
+    bottom: 130%;
+    left: 49%;   
+}
+
+/* Palme til høyre */ 
+.palme1absolute {
+    position: absolute;
+    bottom: 5%;
+    width: 23%;
+    right: 1%;
+}
+
+.palme1 {    
+    width: 100%;
+}
+
+/* Palme til venstre */ 
+.palme2absolute {
+    left: 5%; 
+    bottom: 5%; 
+}
+
+.palme2 {
+    position: absolute; 
+    left: -4%;
+    bottom: 5%;
+    width: 24%;
+}
+
+/* Kokosnøtter festet til palmer */
+.kokosnott1 {
+    position: absolute; 
+    left: 0%; 
+    bottom: 3%; 
+    width: 7%; 
+}
+
+.kokosnott2 {
+    position: absolute; 
+    right: 9%; 
+    bottom: 1%; 
+    width: 7%; 
+}
+
+/* Papegøye plassert på toppen av palme1*/
+.papegoye {
+    position: absolute;
+    left: 72%;
+    bottom: 55%;
+    width: 13%;   
+}
+
+/* Sjøstjerne-dekor på sand */
+.sjostjerne2 {
+    position: absolute; 
+    right: 28%; 
+    bottom: 30%; 
+    width: 4%; 
+}
+
+/* Sjøskjell-dekor på strand */
+.sjoskjell {
+    position: absolute; 
+    right: 28%; 
+    bottom: 22%; 
+    width: 6%; 
+}
+
+/* Solstol plassert under palme1*/
+.solstol {
+    position: absolute;
+    right: 18%; 
+    bottom: 1%; 
+    width: 10%; 
+}
+
+/* Sandslott plassert på sand */
+.sandslott {
+    position: absolute; 
+    left: 29%; 
+    bottom: 22%; 
+    width: 10%;
+}
+
+/* Skilt - viking dame */
+.vikingskiltabsolute {
+    position: absolute;
+    bottom: 4%;
+    left: 44%;
+}
+
+.vikingskilt {    
+    width: 80%;
+}
+
+/* Link til pirat1 */
+.linktilpirat {    
+    position: absolute;
+    bottom: 12%;
+    left: 55%;
+    text-decoration: none;
+    color: black;
+    font-size: 3.2vh;
+}
+
+/* Link til viking1 */
+.linktilviking {    
+    position: absolute;
+    bottom: 32%;
+    left: 52%;
+    right: 50%;
+    text-decoration: none;
+    color: black;
+    font-size: 3.2vh;
+}
+
+/* Samme kode, ulike bølger på havet med ulik hastighet */
+.bolge1 {
+    animation: bolge 170s linear infinite;
+    animation-delay: 5s;
+    position: absolute;
+    bottom: 40%;
+    width: 10%;
+    left: -10%;
+    opacity: 50%;
+}
+
+.bolge2 {
+    animation: bolge 120s linear infinite;
+    animation-delay: 8s;
+    position: absolute;
+    bottom: 60%;
+    width: 10%;
+    left: -10%; 
+    opacity: 50%;
+}
+
+.bolge3 {
+    animation: bolge 180s linear infinite;
+    position: absolute;
+    bottom: 75%;
+    width: 10%;
+    opacity: 50%;
+}
+
+.bolge4 {
+    animation: bolge 100s linear infinite;
+    animation-delay: 2s;
+    position: absolute;
+    bottom: 45%;
+    width: 10%;
+    left: -10%; 
+    opacity: 50%;
+}
+
+/* Kode for bevegende bølger på havet */
+@keyframes bolge {
+    0% {
+        left: -10%;
+    }
+    10% {
+        left: 10%;
+    }
+    20% {
+        left: 20%;
+    }
+    30% {
+        left: 30%;
+    }
+    40% {
+        left: 40%;
+    }
+    50% {
+        left: 50%;
+    }
+    60% {
+        left: 60%;
+    }
+    70% {
+        left: 70%;
+    }
+    80% {
+        left: 80%;
+    }
+    90% {
+        left: 90%;
+    }
+    100% {
+        left: 100%;
+    }
+}

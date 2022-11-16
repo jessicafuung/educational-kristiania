@@ -1,0 +1,456 @@
+.himmel {
+    position: relative;
+    background: #576675;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.fjell1 { /* Det store fjellet */
+     
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    right: 0;
+    bottom: 0;
+    
+}
+.fjell2 { /* Det lille fjellet */
+    
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    right: 40%;
+    bottom: 0;
+}
+
+/* Bruker samme animasjon på alle skyene, forskjellige hastigheter */
+.skyabsolute1 {
+    animation: sky 180s linear infinite;
+    position: absolute;
+    left: 15%;
+    top: 12%;
+    max-width: 25%;
+    min-width: 25%
+}
+
+.skyabsolute2 {
+    animation: sky 100s linear infinite;
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.skyabsolute3 {
+    animation: sky 150s linear infinite;
+    position: absolute;
+    left: 40%;
+    top: 12%;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+@keyframes sky { /* Svevende effekt på skyene */
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 85%;
+    }
+}
+
+.skybilde1 { 
+    width: 60%;
+}
+
+.skybilde2 { /* Ikke fjern den, da blir skyen for stor */
+    width: 100%;
+}
+
+.bolge { /* Klassen som går igjen i de ulike bølge-divene */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: url(Bilder/wave.png);
+    background-size: 1000px 150px;  
+}
+
+.bolge.bolge1 {
+    animation: animate 27s linear infinite; /* Animasjon 1, samme som bølge 3 */
+    z-index: 1000;
+    opacity: 0.8;
+    animation-delay: 0s;
+    bottom: 0px; 
+}
+
+.bolge.bolge2 {
+    animation: animate2 12s linear infinite; /* Animasjon 2, samme som bølge 4 */
+    z-index: 999;
+    opacity: 1;
+    animation-delay: -5s;
+    bottom: 5px;
+}
+
+.bolge.bolge3 {
+    animation: animate 7s linear infinite;
+    z-index: 998;
+    opacity: 0.7;
+    animation-delay: -2s;
+    bottom:  5px; 
+}
+
+.bolge.bolge4 {
+    animation: animate2 2s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 5px;
+}
+
+@keyframes animate {    /* Bølge-animasjon 1 (bølge 1 og 3) */
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 1000px;
+    }
+}
+
+@keyframes animate2 {  /* Bølge animasjon 2 (bølge 2 og 4) */
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: -1000px;
+    }
+}
+
+/* Posisjonering av vikingskip */
+.vikingskipabsolute {
+    animation: skip 2s linear infinite;
+    position: absolute;
+    bottom: 2%;
+    left: 0%;
+}
+
+/* Gynge-effekt av skip */
+@keyframes skip {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-10deg); /* Rotering av skip */
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.vikingskip {
+    width: 100%; /* Størrelse på vikingskip */
+}
+
+/* Posisjonering og størrelse av vikingen i skipet */
+.viking {
+    position: absolute;
+    width: 19%;
+    bottom: 32%;
+    left: 40%
+}
+
+/* div for Thor og sky */
+.thorabsolute {
+    animation: thor 15s linear infinite;
+    position: absolute;
+    width: 50%;
+}
+
+/* Animasjon av bevegelsen til skyen og Thor */
+@keyframes thor {
+    0%  {
+        left: 50%;
+        bottom: 60%;
+    } 
+    25% {
+        left: 55%;
+        bottom: 55%;
+    }
+    50% {
+        left: 50%;
+        bottom: 50%;
+    }
+    75% {
+        left: 45%;
+        bottom: 55%;
+    }
+    100%{
+        left: 50%;
+        bottom: 60%;
+    }
+}
+
+/* Størrelse av Thor samt rotere han 45 grader */
+.thor {
+    transform: rotate(45deg);
+    width: 40%;
+}
+/* Posisjonering og størrelse av skyen Thor sitter på */
+.thorsky {
+    position: absolute;
+    left: 2%;
+    width: 50%;
+    bottom: -14%;
+}
+/* Styling og posisjonering av hammer */
+.mjolnir {  
+    position: absolute;
+    left: 0.5%;
+    bottom: 39%;
+    opacity: 0;
+    font-size: 20px;
+}
+
+/* Styling og posisjonering av monster */
+.monster {
+    animation: monster 10s linear;
+    position: absolute;
+    width: 25%;
+    bottom: 2%;
+    left: 25%;
+    opacity: 0;
+}
+/* Animasjon av monster, få den til å bevege/rotere seg samt å skjules etter animasjonen er ferdig */
+@keyframes monster {
+    0%  {
+        bottom: 2%;
+        left: 25%;
+        opacity: 1;
+    }
+    25% {
+        bottom: -10%;    
+        left: 30%;
+        transform: rotate(30deg);
+    }
+    50% {
+        bottom: -5%;
+        left: 25%;
+        transform: rotate(25deg);
+    }
+    75% {
+        bottom: -15%;
+        left: 30%;
+        transform: rotate(35deg);
+    }
+    83% {
+        bottom: -12%;
+        left: 30%;
+        transform: rotate(40deg);
+    }
+    85% {
+        bottom: -13%;
+        left: 30%;
+        transform: rotate(35deg);
+        opacity: 1;
+    }
+    88% {
+        bottom: -14%;
+        left: 30%;
+        transform: rotate(50deg);
+        opacity: 0;
+    }
+    90% {
+        bottom: -15%;
+        left: 30%;
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+    92% {
+        bottom: -15%;
+        left: 30%;
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+    95% {
+        bottom: -15%;
+        left: 30%;
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+    98% {
+        bottom: -15%;
+        left: 30%;
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        bottom: -15%;
+        left: 30%;
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+}
+
+/* Styling og posisjonering av forside-knappen */
+.knappabsolute {
+    position: absolute;
+    top: 1%;
+    left: 0.5%;
+    padding: 10px 20px 10px 20px;
+    background-color: #f4a460;
+    border-radius: 4px;
+    border: 3px solid black;
+}
+
+/* Styling av tekst forside-knappen */
+.knapp {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: fantasy;    
+}
+
+/* Styling og posisjonering av prøv igjen knappen */
+.knappabsolute2 {
+    position: absolute;
+    top: 1%;
+    right: 0.5%;
+    padding: 10px 20px 10px 20px;
+    background-color: #f4a460;
+    border-radius: 4px;
+    border: 3px solid black;
+}
+/* Styiling av tekst prøv igjen knappen */
+.knapp2 {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: fantasy;    
+}
+
+/* Div for å dekke hele bildet hvitt under lynnedslag hvor bilde av lynet også ligger under samme div */
+.lynabsolute {
+    animation: lynet 7s linear;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#ffffff;
+    opacity:0%;
+}
+/* Animasjon for å time lyn nedslag iforhold til monsteret */
+@keyframes lynet {
+    0%
+        {
+        opacity:0%;
+    }
+    15%
+        {
+        opacity:0%;
+    }
+    16%
+        {
+        opacity:1;
+    }
+    23%
+        {
+        opacity:0;
+    }
+    24%
+        {
+        opacity:1%;
+    }
+    25%
+        {
+        opacity:0%;
+    }
+    40%
+        {
+        opacity:0%;
+    }
+    41%
+        {
+        opacity:1;
+    }
+    48%
+        {
+        opacity:0;
+    }
+    49%
+        {
+        opacity:1%;
+    }
+    50%
+        {
+        opacity:0%;
+    }
+    65%
+        {
+        opacity:0%;
+    }
+    66%
+        {
+        opacity:1;
+    }
+    73%
+        {
+        opacity:0;
+    }
+    74%
+        {
+        opacity:1%;
+    }
+    75%
+        {
+        opacity:0%;
+    }
+    90%
+        {
+        opacity:0%;
+    }
+    91%
+        {
+        opacity:1;
+    }
+    98%
+        {
+        opacity:0;
+    }
+    99%
+        {
+        opacity:1%;
+    }
+    100%
+        {
+        opacity:0;
+    }
+}
+
+/* Styling av lyn-bildet som brukes under lynnedslag */
+.lyn {
+    position:absolute;
+    width:30%;
+    right: 40%;
+    bottom:23%;
+}
+
+/* Bakgrunnsregn hente bildet samt sette størrelse og hastighet på animasjon */
+.regn {
+    background: url(Bilder/regnregn.png);
+    height: 100%;
+    animation: regndraper 0.7s linear infinite;
+}
+
+/* Animasjon til bakgrunnsregn */
+@keyframes regndraper {
+    0%
+        {
+        background-position: 0% 0%;
+    }
+    100%
+        {
+        background-position: 10% 100%;
+    }
+}

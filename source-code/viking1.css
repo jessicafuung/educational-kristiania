@@ -1,0 +1,302 @@
+.himmel {
+    position: relative;
+    background: #66d9ff;
+    width: 100%;
+    height: 100vh;
+}
+
+.solbilde {
+    animation: sol 15s linear infinite;
+    position: absolute;
+    width: 0%;
+    right: 3%;
+    top: 2%; 
+}
+
+@keyframes sol { /*Pulserende effekt*/
+    0%{
+        width: 20%;
+    }
+    50%{
+        width: 22%;
+    }
+    100%{
+        width: 20%;
+    }
+}
+
+.fjell1 { /* Det store fjellet */
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    right: 0;
+    bottom: 0;
+}
+
+.fjell2 { /* Det lille fjellet */
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    right: 40%;
+    bottom: 0;
+}
+
+/* Bruker samme animasjon på alle skyene, forskjellige hastigheter */
+.skyabsolute1 {
+    animation: sky 180s linear infinite; /* Endre hastighet her */
+    position: absolute;
+    left: 15%;
+    top: 12%;
+    max-width: 25%;
+    min-width: 25%;
+}
+.skyabsolute2 {
+    animation: sky 100s linear infinite; /* Endre hastighet her */
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.skyabsolute3 {
+    animation: sky 150s linear infinite; /* Endre hastighet her (Avlange skyen) */
+    position: absolute;
+    left: 40%;
+    top: 12%;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.skybilde1 {
+    width: 60%; 
+}
+
+.skybilde2 {
+    width: 100%; /* Ikke fjern den, da blir skyen for stor */
+}
+
+@keyframes sky { /* Svevende effekt på skyene */
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 85%;
+    }
+}
+
+.bolge { /* Klassen som går igjen i de ulike bølge-divene */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: url(Bilder/wave.png);
+    background-size: 1000px 150px;
+}
+
+.bolge.bolge1 {
+    animation: animate 30s linear infinite; /* Animasjon 1, samme som bølge 3 */
+    z-index: 1000;
+    opacity: 0.8;
+    animation-delay: 0s;
+    bottom: 0px;
+}
+
+.bolge.bolge2 {
+    animation: animate2 15s linear infinite; /* Animasjon 2, samme som bølge 4 */
+    z-index: 999;
+    opacity: 1;
+    animation-delay: -5s;
+    bottom: 5px;
+}
+
+.bolge.bolge3 {
+    animation: animate 10s linear infinite; 
+    z-index: 998;
+    opacity: 0.7;
+    animation-delay: -2s;
+    bottom:  5px; 
+}
+
+.bolge.bolge4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 5px;
+}
+
+@keyframes animate { /* Bølge-animasjon 1 (bølge 1 og 3) */
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 1000px;
+    }
+}
+
+@keyframes animate2 { /*Bølge animasjon 2 (bølge 2 og 4) */
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: -1000px;
+    }
+}
+
+.vikingskipabsolute {
+    animation: skip 10s linear infinite;
+    position: absolute;
+    bottom: 2%;
+    left: 0%;
+}
+
+@keyframes skip { /* Gynge-effekt til vikingskipet */
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.viking { /* Vikingen som står på skipet */
+    position: absolute;
+    width: 19%;
+    bottom: 32%;
+    left: 40%;
+}
+
+.thorabsolute { /* Thor m/ skyen og link på hammeren */
+    animation: thor 15s linear infinite;
+    position: absolute;
+    width: 50%;
+    right: 0%;
+    left: 55%;
+}
+
+@keyframes thor {
+    0%  {
+        left: 50%;
+        bottom: 60%;
+    }
+    25% {
+        left: 55%;
+        bottom: 55%;
+    }
+    50% {
+        left: 50%;
+        bottom: 50%;
+    }
+    75% {
+        left: 45%;
+        bottom: 55%;
+    }
+    100%{
+        left: 50%;
+        bottom: 60%;
+    }
+}
+
+.thor { /* Thor */
+    transform: rotate(45deg);
+    width: 40%;
+}
+
+.thorsky { /* Skyen Thor står på */
+    position: absolute;
+    left: 2%;
+    width: 50%;
+    bottom: -14%;
+}
+
+.mjolnir { /* Hammeren */
+    position: absolute;
+    left: 0.5%;
+    bottom: 39%;
+    opacity: 0;
+    font-size: 20px;
+}
+
+.skilt { /* Selve tavlen */
+    position: absolute;
+    width:  21%;
+    height:34%;
+    right:10%;
+    bottom: 20%;
+}
+
+.thortekst { /* Tekst til tavlen */
+    position: absolute;
+    right:11%;
+    bottom: 33%;
+    width:17%;
+    font-family: fantasy;
+    font-size: 14px;
+}
+
+.rodtekst { 
+    color:red;
+    background-color: transparent;
+    font-weight: 700;
+}
+    
+.lydfil1 { /* Audio tavle */
+    position: absolute;
+    bottom: 27%;
+    width: 7%;
+    right: 17%;
+    opacity:0.8;
+}
+
+.monsterabsolute {
+    animation: monster 16s linear infinite;
+    position: absolute;
+    bottom: 2%;
+    left: 25%;
+}
+
+.monster {
+    width: 100%;
+}
+
+@keyframes monster {
+    0%{
+        bottom: 2%;
+        left: 25%;
+    }
+    25%{
+        bottom: 0%;    
+        left: 30%;
+    }
+    50%{
+        bottom: 2%;
+        left: 25%;
+    }
+    75%{
+        bottom: 0%;
+        left: 30%;
+    }
+}
+
+/* Til forsiden knappen */
+.knappabsolute {
+    position: absolute;
+    top: 1%;
+    left: 0.5%;
+    padding: 10px 20px 10px 20px;
+    background-color: sandybrown;
+    border-radius: 4px;
+    border: 3px solid black;
+}
+
+.knapp {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: fantasy;    
+}

@@ -1,0 +1,456 @@
+/* Sette bakgrunnsfarge, posisjon og størrelse */
+.havet {
+    animation: blod 10s linear;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #2a5da3;
+}
+
+/* Animasjon for å endre farge på bakgrunn */
+@keyframes blod {
+    0% 
+        {
+         
+    }
+    90% 
+        {
+        background-color: #ff0000;
+        opacity: 1;
+    }
+    95% 
+        {
+        background-color: #ff0000;
+        opacity: 0;
+    }
+    99% 
+        {
+        background-color: #ff0000;
+        opacity: 1;
+    }
+    100%
+        {
+        background-color: #ff0000;
+        opacity: 0;
+    }
+}
+
+/* Animasjon for å få haien større og få en bevegelse-effekt */
+@keyframes hai {
+    0% 
+        {
+        width: 5%;
+    }
+    10% 
+        {
+        width: 10%;
+    }
+    20% 
+        {
+        width: 15%;
+    }
+    30% 
+        {
+        width: 20%;
+    }
+    40% 
+        {
+        width: 25%;
+    }
+    50% 
+        {
+        width: 30%;
+    }
+    60% 
+        {
+        width: 35%;
+    }
+    70% 
+        {
+        width: 40%;
+    }
+    80% 
+        {
+        width: 45%;
+    }
+    90% 
+        {
+        width: 40%;
+    }
+    100% 
+        {
+        width: 30%;
+    }
+}
+
+/* Posisjonering og størrelse av hai etter animasjon er ferdig */
+.hai {
+    animation: hai 12s linear;
+    position: absolute;
+    bottom: 10%;
+    left: 30%
+}
+
+/* Størrelse og posisjonering på bakerste del av havbunnen */
+.bunn1 {
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+}
+
+/* Størrelse og posisjonering på fremste del av havbunnen*/
+.bunn2 {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Posisjonering av pirat */
+.piratabsolute {
+    animation: pirat 10.2s linear;
+    position: absolute;
+    left: 41%;
+    opacity: 0
+}
+/* Størrelse på pirat */
+.pirat {
+    width: 500px;
+}
+
+/* Animasjon av pirat som synker nedover i vannet */
+@keyframes pirat {
+    0%
+        {
+        bottom: 100%;
+        opacity: 1;
+    }
+    60%
+        {
+        bottom: 50%;
+        opacity: 1;
+    }
+    90%
+        {
+        bottom: 18%;
+        opacity: 1;
+    }
+    92%
+        {
+        opacity: 0;
+    }
+    95%
+        {
+        opacity: 1;
+    }
+    98%
+        {
+        opacity: 0;
+    }
+    100%
+        {
+        bottom: 18%;
+        opacity: 1;
+    }
+}
+
+/* Posisjonering og styling av "knust" skjerm */
+.cracked {
+    animation: cracked 10s linear;
+    position: absolute;
+    width: 85%;
+    bottom: 9%;
+    left: 8%;
+}
+
+/* Animasjon av knust skjerm som vises når haien treffer piraten */
+@keyframes cracked {
+    0% 
+        {
+        opacity: 0%;
+    }
+    10% 
+        {
+        opacity: 0%;
+    }
+    20% 
+        {
+        opacity: 0%;
+    }
+    30% 
+        {
+        opacity: 0%;
+    }
+    40% 
+        {
+        opacity: 0%;
+    }
+    50% 
+        {
+        opacity: 0%;
+    }
+    60% 
+        {
+        opacity: 0%;
+    }
+    70% 
+        {
+        opacity: 0%;
+    }
+    80% 
+        {
+        opacity: 0%;
+    }
+    90% 
+        {
+        opacity: 0%;
+    }
+    100% 
+        {
+        opacity: 100%;
+    }
+}
+
+/* Posisjonering av krabbe */
+.krabbeabsolute {
+    animation: krabbebeveg 10s linear infinite;
+    position: absolute;
+    bottom: 8%;
+}
+
+/* Animasjon av bevegelsene til krabben */
+ @keyframes krabbebeveg {
+    0%
+        {
+        left: 6%;
+    }
+    50%
+        {
+        left:9%;
+    }
+    100%
+        {
+        left:6%;
+    }
+}
+
+/* Størrelse på krabbe */
+.krabbe {
+    width: 25%;
+}
+
+/* Div for alt som ligger inni snakkeboblen + posisjonering av snakkeboblen */
+.snakkebobleabsolute {
+    animation: snakkeboble1 11s linear infinite;
+    position: absolute;
+    bottom: 22%;
+}
+
+/* Størrelse på snakkeboble */
+.snakkeboble {
+    width: 65%;
+}
+
+/* Animasjon for bevegelse av snakkeboblen */
+@keyframes snakkeboble1 {
+    0% 
+        {
+        left: 9%;
+    }
+    
+    50%
+        {
+        left: 11%;
+    }
+    100%
+        {
+        left: 9%;
+    }
+}
+/* Styling og posisjonering av tekst inni snakkeboblen*/
+.tekst {
+    position: absolute;
+    left: 21%;
+    bottom:46%;
+    width: 30%;
+    font-size: 24px
+}
+
+/* Styling og posisjonering av lydfil inni snakkeboblen */
+.lydfil {
+    position: absolute;
+    left:26%;
+    width: 15%;
+    bottom: 35%   
+}
+
+/* Posisjonering av bobler, alle bruker samme animasjon men med ulik hastigheter */
+.bobler1 {
+    animation: bobler 16s linear infinite;
+    position: absolute;
+    opacity: 50%;
+}
+
+.bobler2 {
+    animation: bobler 8s linear infinite;
+    position: absolute;
+    opacity: 50%;
+    left: 30%;
+}
+
+.bobler3 {
+    animation: bobler 27s linear infinite;
+    position: absolute;
+    opacity: 50%;
+    left: 70%;
+}
+
+/* Animasjon av bobler */
+@keyframes bobler {
+    0% 
+        {
+        width: 10%;
+        bottom: 5%;
+    }
+    10% 
+        {
+        width: 12%;
+        bottom: 10%;
+    }
+    20% 
+        {
+        width: 10%;
+        bottom: 20%;
+    }
+    30% 
+        {
+        width: 11%;
+        bottom: 30%;
+    }
+    40% 
+        {
+        width: 10%;
+        bottom: 40%;
+    }
+    50% 
+        {
+        width: 12%;
+        bottom: 50%;
+    }
+    60% 
+        {
+        width: 10%;
+        bottom: 60%;
+    }
+    70% 
+        {
+        width: 11%;
+        bottom: 70%;
+    }
+    80% 
+        {
+        width: 10%;
+        bottom: 80%;
+    }
+    90% 
+        {
+        width: 12%;
+        bottom: 90%;
+    }
+    100%
+        {
+        width: 10%;
+        bottom: 100%;
+    }
+}
+
+/* Styling og posisjonering av forside-knappen */
+.knappabsolute {
+    position: absolute;
+    top: 1%;
+    left: 0.5%;
+    padding: 10px 20px 10px 20px;
+    background-color: sandybrown;
+    border-radius: 4px;
+    border: 3px solid black;   
+}
+
+/* Styling av forside-knappen */
+.knapp {
+    
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: fantasy;    
+}
+
+/* Styling og posisjonering av prøv igjen knappen */
+.knappabsolute2 {
+    position: absolute; 
+    top: 1%; 
+    right: 0.5%; 
+    padding: 10px 20px 10px 20px; 
+    background-color: sandybrown; 
+    border-radius: 4px; 
+    border: 3px solid black; 
+}
+
+/* Styling av prøv igjen knappen */
+.knapp2 {
+    color: white; 
+    text-decoration: none; 
+    font-size: 20px; 
+    font-family: fantasy;
+}
+
+/* Posisjonering og størrelse for planter, steiner og havbunn dekorasjoner nedenfor */
+.plante2 {
+    position: absolute; 
+    right: 26%; 
+    bottom: 15%; 
+    width: 6%; 
+}
+.plante3 {
+    position: absolute; 
+    right: 5%; 
+    bottom: 5%; 
+    width: 30%; 
+}
+
+.skjell2 {
+    position: absolute; 
+    right: 3%; 
+    bottom: 6%; 
+    width: 10%; 
+}
+
+.sjogress {
+    position: absolute; 
+    right: 2%; 
+    bottom: 12%; 
+    width: 10%; 
+}
+
+.stein1 {
+    position: absolute; 
+    right: -1%; 
+    bottom: 4%; 
+    width: 10%; 
+}
+
+.stein2 {
+    position: absolute; 
+    left: 0%; 
+    bottom: 5%; 
+    width: 6%; 
+}
+
+.gress1 {
+    position: absolute; 
+    left: 6%; 
+    bottom: 5%; 
+    width: 6%; 
+}
+
+
+
+

@@ -1,0 +1,289 @@
+/* Bakgrunn for himmel */ 
+.himmel {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #66d9ff;
+}
+
+.solbilde {
+    animation: sol 15s linear infinite;
+    position:absolute;
+    width: 0%;
+    right:3%;
+    top:2%;
+}
+
+/* Pulserende effekt */
+@keyframes sol { 
+    0%
+        {
+        width: 20%;
+    }
+    50%
+        {
+        width: 22%;
+    }
+    100%
+        {
+        width: 20%;
+    }
+}
+
+/* Bruker samme animasjon på alle skyene, forskjellige hastigheter */
+.skyabsolute1 {
+    animation: sky 180s linear infinite; /* Endre hastighet her */
+    position: absolute;
+    left: 15%;
+    top: 12%;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.skyabsolute2 {
+    animation: sky 100s linear infinite; /* Endre hastighet her */
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.skyabsolute3 {
+    animation: sky 150s linear infinite; /* Endre hastighet her (Avlange skyen) */
+    position: absolute;
+    left: 40%;
+    top: 12%;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+/* De småe skyene */
+.skybilde1 { 
+    width: 60%;
+}
+
+/* Avlange skyen */
+.skybilde2 { 
+    width: 100%; /* Ikke fjern den, da blir skyen for stor */
+}
+
+/* Svevende effekt på skyene */
+@keyframes sky { 
+    0%
+        {
+        left: 0%;
+    }
+    100%
+        {
+        left: 85%;
+    }
+}
+
+/* Klassen som går igjen i de ulike bølge-divene */
+.bolge { 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: url(Bilder/wave.png);
+    background-size: 1000px 150px;
+}
+
+.bolge.bolge1 {
+    animation: animate 30s linear infinite; /* Animasjon 1, samme som bølge 3 */
+    z-index: 1000;
+    opacity: 0.8;
+    animation-delay: 0s;
+    bottom: 0px;
+}
+
+.bolge.bolge2 {
+    animation: animate2 15s linear infinite; /* Animasjon 2, samme som bølge 4 */
+    z-index: 999;
+    opacity: 1;
+    animation-delay: -5s;
+    bottom: 5px;
+}
+
+.bolge.bolge3 {    
+    animation: animate 10s linear infinite;
+    z-index: 998;
+    opacity: 0.7;
+    animation-delay: -2s;
+    bottom:  5px;
+}
+
+.bolge.bolge4 {    
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 5px;
+}
+
+/* Bølge-animasjon 1 (bølge 1 og 3) */
+@keyframes animate { 
+    0%  {
+        background-position: 0;
+    }
+    100%{
+        background-position: 1000px;
+    }
+}
+
+/*Bølge animasjon 2 (bølge 2 og 4) */
+@keyframes animate2 { 
+    0%  {
+        background-position: 0;
+    }
+    100%{
+        background-position: -1000px;
+    }
+}
+
+.piratskipabsolute {
+    animation: skip 10s linear infinite;
+    position: absolute;
+    bottom: 0%;
+    left: 40%;
+}
+
+/* Gynge-effekt til piratskipet */
+@keyframes skip { 
+    0%  {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+/* Piraten til venstre */
+.pirat1 { 
+    position: absolute;
+    width: 50%;
+    left: -8%;
+    bottom: 42%;
+}
+
+/* Piraten til høyre */
+.pirat2 { 
+    position: absolute;
+    left: 61%;
+    bottom: 56%;
+}
+
+/* Fortelleren */
+.fortellerabsolute {
+    animation: forteller 12s linear infinite;
+    position: absolute;
+    bottom: 0%;
+    left: 2%;
+}
+
+.forteller {
+    width: 60%;
+}
+
+@keyframes forteller {
+    0%  {
+        bottom: 2%;
+    }
+    50% {
+        bottom: -2%; 
+    }
+    100%{
+        bottom: 2%;
+    }
+}
+
+/* Snakkeboble 1 m/ tekst */
+.snakkebobleabsolute { 
+    position: absolute;
+    bottom: 38%;
+    left: 12%;
+}
+
+.snakkeboble1 {
+    animation: snakkeboble1 12s linear infinite;
+    bottom: 40%;
+}
+
+@keyframes snakkeboble1 {
+    0%  
+        {
+        width: 70%;
+    }
+    50% 
+        {
+        width: 73%;
+    }
+    100%
+        {
+        width: 70%;
+    }
+}
+
+.tekst {
+    position:absolute;
+    width: 30%;
+    top: 25%;
+    left:22%;
+}
+
+/* Snakkeboble 2 m/ audio */
+.snakkebobleabsolute2 { 
+    position: absolute;
+    bottom: 67%;
+    left:30%;
+}
+
+.snakkeboble2 {
+    animation: snakkeboble2 12s linear infinite;
+    bottom: 40%;
+}
+
+@keyframes snakkeboble2 {
+    0% 
+        {
+        width: 40%;
+    }
+    50%
+        {
+        width: 43%;
+    }
+    100%
+        {
+        width: 40%;
+    }
+}
+
+.lydfil1 {
+    position: absolute;
+    width: 16%;
+    top: 23%;
+    left: 13%;
+}
+
+/* Til forsiden knappen */
+.knappabsolute {
+    position: absolute;
+    top: 1%;
+    left: 0.5%;
+    padding: 10px 20px 10px 20px;
+    background-color: sandybrown;
+    border-radius: 4px;
+    border: 3px solid black;
+}
+
+.knapp {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: fantasy;    
+}
